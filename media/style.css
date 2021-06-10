@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/* Whole document */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: "#222";
+}
+
+/* Navbar */
+.navbar {
+    padding: .8rem;
+}
+.navbar-nav li {
+    padding-right: 1em;
+}
+.nav-link {
+    font-size: 1.2em !important;
+}
+
+/* Carousel and dropdown list in nav */
+#dropdown-list {
+    list-style-type: none;
+}
+.carousel-caption {
+    background: rgb(204, 204, 204); 
+    background: rgba(44, 44, 44, 0.7);
+}
+.carousel-caption button {
+    padding: 10px 30px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+/* Cards/product images */
+.card img {
+    display: block;
+    max-width: 600px;
+    height: auto;
+}
+
+/* signup forms */
+.user-form {
+    width: 25%;
+    text-align: center;
+    margin-top: 8em;
+}
+
+/* product viewer */
+.product-viewer {
+    text-align: justify;
+    margin-top: 8em;
+}
+
+/* horizontal rules*/
+hr.light{
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+hr.dark{
+    border-top: 1px solid #585656;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+/* mailbox */
