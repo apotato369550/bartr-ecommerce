@@ -20,6 +20,10 @@
 // this might be the culpritVV
 // fix this and then test it out tomorrow
 // i might have to re-do this
+
+// i am re-doing this portion
+
+/*
 if(!isset($_POST["submit"])){
 	 // drinking coffee wil solve it
 	header("Location: ../index.php?view=listings&error=unexpectederroroof");
@@ -148,7 +152,18 @@ if(!mysqli_stmt_execute($stmt)){
 // change edit button
 header("Location: ../index.php?listing=edit&edit=success");
 exit();
+*/
 
+// start hereVVV
+
+if(!isset($_POST["submit"])){
+	// test this
+	header("Location: ../index.php?bruh");
+	exit();
+} else {
+	header("Location: ../index.php?yeet");
+	exit();
+}
 
 // update shiz here
 
