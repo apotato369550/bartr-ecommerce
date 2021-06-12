@@ -160,11 +160,9 @@ if(!isset($_POST["submit"])){
 	// test this
 	header("Location: ../index.php?bruh");
 	exit();
-} else {
-	header("Location: ../index.php?yeet");
-	exit();
-}
+} 
 
+require "dbh.inc.php";
 // update shiz here
 
 // image processing
