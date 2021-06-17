@@ -80,7 +80,7 @@ if(isset($_POST["delete"])){
 
 	// this works
 } else if(isset($_POST["edit"])){
-	// work on this
+	// fix this mf
 	$sql = "SELECT * FROM listings WHERE id=? AND title=?";
 	$stmt = mysqli_stmt_init($connection);
 
@@ -99,6 +99,9 @@ if(isset($_POST["delete"])){
 	if(!$row = mysqli_fetch_assoc($result)){
 		// this don't work??
 		// check edit listing filfe
+		// why is this getting hit??
+		// ohhhhhhhh
+		// it's interfering with this
 		header("Location: ../index.php?view=listings&error=requestnotfoundlol");
 		exit();
 	} else {
