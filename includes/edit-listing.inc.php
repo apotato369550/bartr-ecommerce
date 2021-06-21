@@ -59,24 +59,6 @@ if(strlen($description) > 500){
 	exit();
 }
 
-$sql = "SELECT * FROM listings WHERE title=?";
-
-if(!mysqli_stmt_prepare($stmt, $sql)){
-	// test this
-	header("Location: ../index.php?error=sqlerrorprep1");
-	exit();
-} else {
-	mysqli_stmt_bind_param($stmt, "s", $title);
-	mysqli_stmt_execute($stmt);
-}
-
-$result = mysqli_stmt_get_result($stmt);
-
-if($row = mysqli_fetch_assoc($result)){
-	header("Location: ../index.php?error=titlealreadyinuse");
-	exit();
-}
-
 $allowedExtensions = array('jpg', 'jpeg', 'png', 'pdf');
 $fileNames = array();
 $numberOfFiles = 0;
@@ -103,7 +85,7 @@ foreach($_FILES["images"]["tmp_name"] as $key => $image){
 		exit();
 	}
 
-	if($imageSize > 500000){
+	if($imageSize > 5000000){
 		header("Location: ../index.php?error=filesizetoobig&image=".$imageName);
 		exit();
 	}
@@ -132,7 +114,17 @@ $id = $_POST["id"];
 // test tghis later
 // this still doesn't work??
 // forgot to add 'VALUES' keyword
-$sql = "UPDATE listings SET (title, category, description, image, owner, keywords, last_updated) VALUES (?, ?, ?, ?, ?, ?, ?) WHERE id=?";
+// smth still wrong w/ this???
+// echo out each thing
+//  count everything else as well and the syntax
+// count this later
+// $sql = "UPDATE listings SET (title, category, description, image, owner, keywords, last_updated) VALUES (?, ?, ?, ?, ?, ?, ?) WHERE id=?";
+// get rid of the columns one by one to see if it'll prepare
+// elements and variables do not match
+
+// LACKING LAST UPDATED BRUH
+// fix this shit later
+$sql = "UPDATE listings SET title=?, category=?, description=?, image=?, owner=?, keywords=?, last_updated=? WHERE id=?";
 
 // this is wrong for some reason...
 // edit this tomorrow
@@ -141,7 +133,23 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
 	exit();
 }
 
-mysqli_stmt_bind_param($stmt, "ssssssii", $title, $category, $description, $fileNames, $keywords, $id);
+// bind param fail
+// check if names of columns are correct
+// description???
+// test this
+// test this later
+
+// THIS WORKS:)))
+// continue as normal
+if(!mysqli_stmt_bind_param($stmt, "ssssssii", $title, $category, $description, $fileNames, $username, $keywords, $date, $id)){
+	header("Location: ../index.php?error=bindparamfail");
+	exit();
+} 
+
+// test this tomorrow
+
+// fix this belowVVV
+// mysqli_stmt_bind_param($stmt, "ssssssii", $title, $category, $description, $fileNames, $keywords, $id);
 
 if(!mysqli_stmt_execute($stmt)){
 	header("Location: ../index.php?error=sqlerrorexe");
@@ -171,6 +179,9 @@ exit();
 // find requestnotfound???
 // test this out tomorrow?
 // still not workinG??
+
+// THIS WORKS
+// FIX the edit thing tho to enable the original picture
 
 
 
