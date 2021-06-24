@@ -47,8 +47,8 @@
 					<form method="POST" action="includes/edit-listing.inc.php" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-6">
-								<input type="hidden" name="user" value="<?php echo $_SESSION["username"] ?>">
-								<input type="hidden" name="id" value="<?php echo $id ?>">
+								<input type="hidden" name="user" value="<?php echo $_SESSION["username"] ?>" required>
+								<input type="hidden" name="id" value="<?php echo $id ?>" required>
 
 								<div id="slides" class="carousel slide" data-ride="carousel">
 									<ul class="carousel-indicators">
@@ -73,6 +73,8 @@
 												query images from database on load
 												display them here through php or javascript
 												i think it's easier to use php to do this
+
+												// get rid of image here???
 											-->
 										</div>
 										<?php 
@@ -111,10 +113,13 @@
 								there is something wrong w/ the includes
 								fix the includes
 								// test if the entire thing works w/o the id
+								// revert to previous commit??
+								// i made a mistake here
+								// src google how to uncommit lmao
 								 -->
-								<input type="hidden" name="owner" value="<?php echo $owner; ?>">
+								<input type="hidden" name="owner" value="<?php echo $owner; ?>" required>
 
-								<input type="text" name="title" placeholder="Title..." maxlength="50" value="<?php echo $title; ?>" class="p-2 mb-4 border-0 rounded w-100">
+								<input type="text" name="title" placeholder="Title..." maxlength="50" value="<?php echo $title; ?>" class="p-2 mb-4 border-0 rounded w-100" required>
 								<br>
 								<select name="category" value="<?php echo $category ?>" class="p-2 mb-4 border-0 rounded col w-100">
 									<option value="Electronic Devices">Electronic Devices</option>
@@ -132,12 +137,18 @@
 									<option value="Other" selected="selected">Other</option>
 								</select>
 								<br>
-								<textarea name="description" rows="7" cols="55" maxlength="500" placeholder="Enter your item description..." class="p-2 mb-4 border-0 rounded w-100"><?php echo $description; ?></textarea>
+								<textarea name="description" rows="7" cols="55" maxlength="500" placeholder="Enter your item description..." class="p-2 mb-4 border-0 rounded w-100" required><?php echo $description; ?></textarea>
 								<br>
-								<input type="text" name="keywords" placeholder="Enter keywords here separated by a space and a comma... ( ,)" value="<?php echo $keywords; ?>" id="keywords" class="p-2 mb-4 border-0 rounded w-100">
+								<input type="text" name="keywords" placeholder="Enter keywords here separated by a space and a comma... ( ,)" value="<?php echo $keywords; ?>" id="keywords" class="p-2 mb-4 border-0 rounded w-100" required>
 								<br>
 								<button class="btn btn-outline-light btn-lg m-4">
-									<input type="file" name="images[]" multiple="multiple" src="<?php echo $image ?>" onchange="readURL(this);">
+										<!-- add required to all inputs in:
+										login
+										register
+										create stuff
+										all the tings
+										 -->
+									<input type="file" name="images[]" multiple="multiple" src="<?php echo $image ?>" onchange="readURL(this);" required>
 								</button>
 								<br>
 								<button type="submit" name="submit" class="btn btn-outline-light btn-lg">Edit Listing</button>
