@@ -9,7 +9,7 @@
 			<p>Remember that once you delete your account, it cannot be undone. All your information, including your listings will be deleted.</p>
 			<hr class="light">
 			<form method="POST" action="../includes/delete-request.inc.php">
-				<input type="email" name="email" placeholder="Email" class="p-2 mb-4 border-0 rounded">
+				<input type="email" name="email" placeholder="Email" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 				<hr class="light">
 				<button type="submit" name="submit" class="btn btn-secondary">Delete Your Account</button>

@@ -6,13 +6,13 @@
 			<h1 class="display-6">Create an Account</h1>
 			<hr class="light">
 			<form action="../includes/signup.inc.php" method="POST">
-				<input type="text" placeholder="Username" name="username" class="p-2 mb-4 border-0 rounded">
+				<input type="text" placeholder="Username" name="username" class="p-2 mb-4 border-0 rounded" required>
 				<br>
-				<input type="email" placeholder="Email" name="email" class="p-2 mb-4 border-0 rounded">
+				<input type="email" placeholder="Email" name="email" class="p-2 mb-4 border-0 rounded" required>
 				<br>
-				<input type="password" placeholder="Password" name="password" class="p-2 mb-4 border-0 rounded">
+				<input type="password" placeholder="Password" name="password" class="p-2 mb-4 border-0 rounded" requried>
 				<br>
-				<input type="password" placeholder="Repeat Password" name="repeat-password" class="p-2 mb-4 border-0 rounded">
+				<input type="password" placeholder="Repeat Password" name="repeat-password" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 				<hr class="light">
 				<button type="submit" name="submit" class="btn btn-secondary">Sign Up!</button>

@@ -15,9 +15,9 @@
 				<input type="hidden" name="selector" value="<?php echo $_GET["selector"] ?>">
 				<input type="hidden" name="validator" value="<?php echo $_GET["validator"] ?>">
 
-				<input type="password" name="password" placeholder="Password" class="p-2 mb-4 border-0 rounded">
+				<input type="password" name="password" placeholder="Password" class="p-2 mb-4 border-0 rounded" required>
 				<br> 
-				<input type="text" name="code" placeholder="Verification Code" class="p-2 mb-4 border-0 rounded">
+				<input type="text" name="code" placeholder="Verification Code" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 				<hr class="light">
 				<button type="submit" name="submit" class="btn btn-secondary">Delete Your Account</button>

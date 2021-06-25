@@ -14,7 +14,7 @@
 				<input type="hidden" name="selector" value="<?php echo $_GET["selector"] ?>">
 				<input type="hidden" name="validator" value="<?php echo $_GET["validator"] ?>">
 
-				<input type="text" placeholder="Verification Code" name="code" class="p-2 mb-4 border-0 rounded">
+				<input type="text" placeholder="Verification Code" name="code" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 				<hr class="light">
 				<button type="submit" name="submit" class="btn btn-secondary">Change your email</button>

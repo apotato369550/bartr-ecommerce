@@ -55,7 +55,7 @@ if(isset($_SESSION["username"])){
                 <input type="hidden" name="title" value="<?php echo $title ?>">
 
                 <img src="<?php echo $profilePic ?>" width="60" alt="Profile Picture" class="rounded-circle m-1">
-                <textarea name="reply" rows="2" cols="55" maxlength="500" placeholder="Say Something..." style="vertical-align: middle;"></textarea>
+                <textarea name="reply" rows="2" cols="55" maxlength="500" placeholder="Say Something..." style="vertical-align: middle;" required></textarea>
                 <button type="submit" class="btn btn-outline-dark btn-m">Reply</button>
             </form>
         </div>

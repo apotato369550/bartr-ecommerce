@@ -14,13 +14,13 @@
 				<input type="hidden" name="selector" value="<?php echo $_GET["selector"] ?>">
 				<input type="hidden" name="validator" value="<?php echo $_GET["validator"] ?>">
 
-				<input type="email" name="old-email" placeholder="Old address here" class="p-2 mb-4 border-0 rounded">
+				<input type="email" name="old-email" placeholder="Old address here" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 
-				<input type="email" name="new-email" placeholder="New email address here" class="p-2 mb-4 border-0 rounded">
+				<input type="email" name="new-email" placeholder="New email address here" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 
-				<input type="password" name="password" placeholder="Password" class="p-2 mb-4 border-0 rounded">
+				<input type="password" name="password" placeholder="Password" class="p-2 mb-4 border-0 rounded" required>
 				<br>
 
 				<hr class="light">
