@@ -35,13 +35,12 @@ if(empty($row["profile_picture"])){
 // figure out the ting
 ?>
 
-<div class="container">
-	<div>
-		<h1>Your Profile: </h1>
-		<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>">
-	</div>
-	<div>
+<div class="text-center jumbotron mx-auto text-white bg-secondary jumbotron">
 
+	<h1 class="display-6">Your Profile: </h1>
+	<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>">
+
+	<div>
 		<p>Userame: <?php echo $username; ?> </p>
 		<p>Email: <?php echo $email; ?> </p>
 
