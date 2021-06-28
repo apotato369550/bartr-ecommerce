@@ -157,6 +157,8 @@ each reply has an id of a comment it belongs to
 						then figure out how to do it in bootstrap
 						do the same in the comment section and replies
 						increase the font size of comments and replies
+						
+						figure out what to do here
 						-->
 						<textarea name="comment" rows="2" cols="55" maxlength="500" placeholder="Say Something..." class="m-1" style="vertical-align: middle;" required></textarea>
 						<button type="submit" name="submit" class="btn btn-outline-dark btn-m m-1">Comment</button>

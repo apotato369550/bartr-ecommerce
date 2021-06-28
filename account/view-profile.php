@@ -1,4 +1,4 @@
-<h1> My Profile </h1>
+
 
 <?php
 
@@ -29,25 +29,36 @@ $profilePic = "uploads/profile-pictures/".$row["profile_picture"];
 if(empty($row["profile_picture"])){
 	$profilePic = "images/profile-pic.png";
 }
+
+// work on thisVVV
+// copy format from login and register fields but w/ secondary color instead of dark
+// figure out the ting
 ?>
 
-<h1>Your Profile: </h1>
+<div class="container">
+	<div>
+		<h1>Your Profile: </h1>
+		<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>">
+	</div>
+	<div>
 
-<img width="20" height="20" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>">
-<p>Userame: <?php echo $username; ?> </p>
-<p>Email: <?php echo $email; ?> </p>
+		<p>Userame: <?php echo $username; ?> </p>
+		<p>Email: <?php echo $email; ?> </p>
 
-<h1>Settings: </h1>
+		<h1>Settings: </h1>
 
-<button onclick="document.getElementById('change-profile-pic-form-container').style.display = 'block';">Edit Profile Pic</button>
-<div id="change-profile-pic-form-container" style="display: none;">
-	<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
-		<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
-		<input type="file" name="image">
-		<button type="submit" name="submit">Edit</button>
-	</form>
+		<button onclick="document.getElementById('change-profile-pic-form-container').style.display = 'block';">Edit Profile Pic</button>
+		<div id="change-profile-pic-form-container" style="display: none;">
+			<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
+				<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
+				<input type="file" name="image">
+				<button type="submit" name="submit">Edit</button>
+			</form>
+		</div>
+		<a href="user/email-change-request.php">Change Email</a>
+		<a href="user/reset-password.php">Reset Password</a>
+		<a href="user/delete-request.php">Delete Account</a>
+	</div>
 </div>
-<a href="user/email-change-request.php">Change Email</a>
-<a href="user/reset-password.php">Reset Password</a>
-<a href="user/delete-request.php">Delete Account</a>
+
 
