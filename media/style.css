@@ -68,4 +68,10 @@ hr.dark{
     margin-bottom: 1rem;
 }
 
-/* mailbox */
+/* User profile */
+.user-profile {
+    width: 50%;
+    text-align: center;
+    margin-top: 5em;
+}
+
