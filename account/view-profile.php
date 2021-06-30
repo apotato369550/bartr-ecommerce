@@ -36,6 +36,7 @@ if(empty($row["profile_picture"])){
 // work on this
 // copy first the signup ting
 // is there a .css file here?
+// work on this
 ?>
 
 <main>
@@ -44,7 +45,10 @@ if(empty($row["profile_picture"])){
 		<h1 class="display-4">Your Profile: </h1>
 		<div>
 			<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>" class="rounded-circle">
+			
 			<button onclick="document.getElementById('change-profile-pic-form-container').style.display = 'block';">Edit Profile Pic</button>
+			<br>
+			<!-- test tomorrow -->
 			<div id="change-profile-pic-form-container" style="display: none;">
 				<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
 					<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
@@ -52,18 +56,34 @@ if(empty($row["profile_picture"])){
 					<button type="submit" name="submit">Edit</button>
 				</form>
 			</div>
+
+			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#profile-changer" aria-expanded="false" aria-controls="profile-changer">Edit Profile Pic</button>
+
+			<div id="profile-changer" class="collapse">
+				<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
+					<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
+					<input type="file" name="image">
+					<button type="submit" name="submit">Edit</button>
+				</form>
+			</div>
+
 		</div>
 		<hr class="light">
 
 		<div>
-			<p>Userame: <?php echo $username; ?> </p>
-			<p>Email: <?php echo $email; ?> </p>
+			<div>
+				<p>Userame: <?php echo $username; ?> </p>
+				<a href="user/reset-password.php">Reset Password</a>
+			</div>
+
+			<div>
+				<p>Email: <?php echo $email; ?> </p>
+				<a href="user/email-change-request.php">Change Email</a>
+			</div>
 
 			<h1>Settings: </h1>
 
 			
-			<a href="user/email-change-request.php">Change Email</a>
-			<a href="user/reset-password.php">Reset Password</a>
 			<a href="user/delete-request.php">Delete Account</a>
 		</div>
 	</div>
