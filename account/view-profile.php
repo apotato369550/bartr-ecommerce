@@ -43,27 +43,20 @@ if(empty($row["profile_picture"])){
 	<div class="text-center jumbotron mx-auto text-white bg-secondary user-profile">
 
 		<h1 class="display-4">Your Profile: </h1>
-		<div>
+		<div class="text-center m-auto">
 			<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>" class="rounded-circle">
-			
-			<button onclick="document.getElementById('change-profile-pic-form-container').style.display = 'block';">Edit Profile Pic</button>
 			<br>
-			<!-- test tomorrow -->
-			<div id="change-profile-pic-form-container" style="display: none;">
+			<!-- this works but is pretty ugly. fix it -->
+
+			<button class="btn btn-dark mt-1 mb-3" type="button" data-toggle="collapse" data-target="#profile-changer" aria-expanded="false" aria-controls="profile-changer">Edit Profile Pic</button>
+			<br>
+			<div id="profile-changer" class="collapse p-2 bg-dark rounded w-50 m-auto">
 				<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
 					<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
-					<input type="file" name="image">
-					<button type="submit" name="submit">Edit</button>
-				</form>
-			</div>
-
-			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#profile-changer" aria-expanded="false" aria-controls="profile-changer">Edit Profile Pic</button>
-
-			<div id="profile-changer" class="collapse">
-				<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
-					<input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
-					<input type="file" name="image">
-					<button type="submit" name="submit">Edit</button>
+					<input type="file" name="image" class="btn btn-outline-light btn-secondary btn-s m-2">
+					<!-- make this button transparent -->
+					<br>
+					<button type="submit" name="submit" class="btn btn-outline-light btn-s">Edit</button>
 				</form>
 			</div>
 
