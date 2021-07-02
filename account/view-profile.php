@@ -44,11 +44,11 @@ if(empty($row["profile_picture"])){
 
 		<h1 class="display-4">Your Profile: </h1>
 		<div class="text-center m-auto">
-			<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>" class="rounded-circle">
+			<img width="200" height="200" alt="<?php echo $profilePic ?>" src="<?php echo $profilePic ?>" class="rounded-circle m-2">
 			<br>
 			<!-- this works but is pretty ugly. fix it -->
 
-			<button class="btn btn-dark mt-1 mb-3" type="button" data-toggle="collapse" data-target="#profile-changer" aria-expanded="false" aria-controls="profile-changer">Edit Profile Pic</button>
+			<button class="btn btn-outline-light mt-1 mb-3 btn-s" type="button" data-toggle="collapse" data-target="#profile-changer" aria-expanded="false" aria-controls="profile-changer">Edit Profile Pic</button>
 			<br>
 			<div id="profile-changer" class="collapse p-2 bg-dark rounded w-50 m-auto">
 				<form method="POST" action="includes/change-profile-pic.inc.php" enctype="multipart/form-data">
@@ -64,20 +64,18 @@ if(empty($row["profile_picture"])){
 		<hr class="light">
 
 		<div>
+			<h1>Settings: </h1>
+			<!-- continue to format this -->
+
 			<div>
 				<p>Userame: <?php echo $username; ?> </p>
-				<a href="user/reset-password.php">Reset Password</a>
-			</div>
-
-			<div>
 				<p>Email: <?php echo $email; ?> </p>
+			</div>
+			<div>
+				<a href="user/reset-password.php">Reset Password</a>
+				<a href="user/delete-request.php">Delete Account</a>
 				<a href="user/email-change-request.php">Change Email</a>
 			</div>
-
-			<h1>Settings: </h1>
-
-			
-			<a href="user/delete-request.php">Delete Account</a>
 		</div>
 	</div>
 </main>
