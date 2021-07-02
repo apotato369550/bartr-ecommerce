@@ -72,9 +72,16 @@ if(empty($row["profile_picture"])){
 				<p>Email: <?php echo $email; ?> </p>
 			</div>
 			<div>
-				<a href="user/reset-password.php">Reset Password</a>
-				<a href="user/delete-request.php">Delete Account</a>
-				<a href="user/email-change-request.php">Change Email</a>
+			<!-- convert these to forms and get rid of anchor tags -->
+				<button class="btn btn-dark btn-s">
+					<a href="user/email-change-request.php">Change Email</a>
+				</button>
+				<button class="btn btn-dark btn-s">
+					<a href="user/reset-password.php">Reset Password</a>
+				</button>
+				<button class="btn btn-danger btn-s">
+					<a href="user/delete-request.php">Delete Account</a>
+				</button>
 			</div>
 		</div>
 	</div>
