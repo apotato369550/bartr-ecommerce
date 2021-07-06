@@ -4,5 +4,4 @@
 	require "search.php";
 	require "footer.php";
 	
-	// figure out how to go live
-?>
+	// do one final test of all the website's features then boom

@@ -68,20 +68,22 @@ if(empty($row["profile_picture"])){
 			<!-- continue to format this -->
 
 			<div>
-				<p>Userame: <?php echo $username; ?> </p>
-				<p>Email: <?php echo $email; ?> </p>
+				<h3>Userame: </h3> <p> <?php echo $username; ?> </p>
+				<h3>Email: </h3> <p> <?php echo $email; ?> </p>
 			</div>
 			<div>
-			<!-- convert these to forms and get rid of anchor tags -->
-				<button class="btn btn-dark btn-s">
-					<a href="user/email-change-request.php">Change Email</a>
-				</button>
-				<button class="btn btn-dark btn-s">
-					<a href="user/reset-password.php">Reset Password</a>
-				</button>
-				<button class="btn btn-danger btn-s">
-					<a href="user/delete-request.php">Delete Account</a>
-				</button>
+			<!-- convert these to forms and get rid of anchor tags 
+			figure out how to make the forms inline
+			-->
+				<form method="POST" action="user/email-change-request.php" class="m-3">
+					<button type="submit" class="btn btn-dark btn-s"|> Change Email </button>
+				</form>
+				<form method="POST" action="user/reset-password.php" class="m-3">
+					<button type="submit" class="btn btn-dark btn-s"|> Reset Password </button>
+				</form>
+				<form method="POST" action="user/delete-request.php" class="m-3">
+					<button type="submit" class="btn btn-danger btn-s"|> Delete Account </button>
+				</form>
 			</div>
 		</div>
 	</div>

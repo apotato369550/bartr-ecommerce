@@ -33,6 +33,8 @@
 						<?php 
 					}
 				} 
+				// make a thing that displays error messages
+				// create a separate php file that displays error messages
 			?>
 		</div>
 	</div>

@@ -94,7 +94,7 @@ try{
 	header("Location: ../index.php?request=success");
 	exit();
 } catch (Exception $e) {
-	header("Location: ../user/signup.php?error=mailererror");
+	header("Location: ../user/delete-request.php?error=mailererror");
 	exit();
 }
 

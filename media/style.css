@@ -75,3 +75,8 @@ hr.dark{
     margin-top: 5em;
 }
 
+/* error displayers in forms */
+.error {
+    color: red;
+    font-size: small;
+}

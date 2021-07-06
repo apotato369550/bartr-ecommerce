@@ -73,7 +73,7 @@ while($row = mysqli_fetch_assoc($result)){
 	$title = $row["title"];
 	$description = $row["description"];
 	$keywords = $row["keywords"];
-	$lastUpdated = $row["last_updated"];
+	$lastUpdated = date("d/m/Y", $row["last_updated"]);
 	$category = $row["category"];
 	$date = date("d/m/Y", $row["date"]);
 	

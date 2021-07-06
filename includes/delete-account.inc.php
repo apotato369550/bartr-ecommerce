@@ -69,7 +69,7 @@ while($row = mysqli_fetch_assoc($result)){
 	}
 }
 
-$sql = "DELETE FROM listings WHERE owner=?";
+$sql = "DELETE * FROM listings WHERE owner=?";
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
 	header("Location: ../user/delete-account.php?error=sqlerrorprep2&selector=".$selector."&validator=".$validator);
@@ -103,7 +103,7 @@ if(!empty($profilePicture)){
 	unlink($profilePicture);
 }
 
-$sql = "DELETE FROM accounts WHERE username=?";
+$sql = "DELETE * FROM accounts WHERE username=?";
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
 	header("Location: ../user/delete-account.php?error=sqlerrorprep4&selector=".$selector."&validator=".$validator);
@@ -113,7 +113,7 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
 	mysqli_stmt_execute($stmt);
 }
 
-$sql = "DELETE FROM account_delete WHERE selector=?";
+$sql = "DELETE * FROM account_delete WHERE selector=?";
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
 	header("Location: ../user/delete-account.php?error=sqlerrorprep5&selector=".$selector."&validator=".$validator);

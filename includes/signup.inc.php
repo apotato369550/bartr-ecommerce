@@ -29,10 +29,17 @@ if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
 	exit();
 } 
 
+if(strlen($password) < 8){
+	header("Location: ../user/signup.php?error=passwordtooshort&username=".$username."&email=".$email);
+	exit();
+}
+
 if($password != $repeatPassword){
 	header("Location: ../user/signup.php?error=passwordcheck&username=".$username."&email=".$email);
 	exit();
 }
+
+
 
 
 require "dbh.inc.php";

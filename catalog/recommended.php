@@ -46,7 +46,7 @@ if(isset($_COOKIE["searched"])){
 		$description = $row["description"];
 		$keywords = $row["keywords"];
 		$date = date("d/m/Y", $row["date"]);
-		$lastUpdated = $row["last_updated"];
+		$lastUpdated = date("d/m/Y", $row["last_updated"]);
 		$category = $row["category"];
 		
 		// fix this
