@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <!-- test if this collapse works -->
+    <!-- test if this collapse works 
 
     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="<?php $replyId ?>" aria-expanded="false" aria-controls="collapseExample">
         View Reply
@@ -25,4 +25,5 @@
             <p><?php echo $text; ?></p>
         </div>
     </div>
+    -->
 </div>

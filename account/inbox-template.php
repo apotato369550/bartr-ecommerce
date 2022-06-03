@@ -1,7 +1,6 @@
 <div class="card">
     <!-- copypaste the ting
     paste the ting
-    -->
     <div class="card">
         <div class="card-header" id="headingOne">
         <h2 class="mb-0">
@@ -18,11 +17,14 @@
     </div>
   </div>
 
+  use $messageId
+    -->
+
     <div>
         <p><?php echo $sender." - ".$date ?> Messaged</p>
     </div>
     <div class="row">
-        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#<?php echo $messageId ?>" aria-expanded="false" aria-controls="<?php echo $messageId ?>">
             View Message
         </button>
         <form method="POST" action="includes/delete-message.inc.php">
@@ -36,7 +38,7 @@
 
 
 
-    <div class="collapse" id="collapseExample">
+    <div class="collapse" id="<?php echo $messageId ?>">
         <div class="card card-body">
             <div>
                 <p><?php echo $title ?></p>

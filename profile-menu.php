@@ -24,6 +24,7 @@
 			<li><a href="index.php?view=profile" class="dropdown-item">View Profile</a></li>
 			<li><a href="index.php?view=listings" class="dropdown-item">Manage Listings</a></li>
 			<li><a href="index.php?view=mailbox" class="dropdown-item">Mailbox</a></li> 
+			
 
 			<div class="dropdown-divider"></div>
 
