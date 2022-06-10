@@ -113,18 +113,6 @@
                 // this is 1
                 require "outbox-template.php";
 
-                ?>
-
-                    <form method="POST" action="includes/delete-message.inc.php">
-                        <input name="id" value="<?php echo $id; ?>" type="hidden">
-                        <input name="subject" value="<?php echo $title ?>" type="hidden">
-                        <input name="user" value="<?php echo $username ?>" type="hidden">
-
-                        <button type="submit" name="submit" type="hidden">X</button>
-                    </form>
-
-                <?php
-
                 $messageCounter++;
             }
             ?>
