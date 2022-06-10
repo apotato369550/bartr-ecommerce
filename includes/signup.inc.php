@@ -93,12 +93,12 @@ try{
 	
 	$mail->SMTPDebug = 2;                    
 	$mail->isSMTP();                                          
-	$mail->Host = 'smtp.gmail.com';                  
+	$mail->Host = 'smtp.mail.yahoo.com';                  
 	$mail->SMTPAuth = true;                                
-	$mail->Username = 'itwebsite000@gmail.com';               
-	$mail->Password = 'Andre510';                              
-	$mail->SMTPSecure = "tls";       
-	$mail->Port = 587;      
+	$mail->Username = 'it.website@yahoo.com';               
+	$mail->Password = 'haweztpfjwtylkuu';                              
+	$mail->SMTPSecure = "ssl";       
+	$mail->Port = 465;      
 	
 	$mail->SMTPOptions = array(
 	'ssl' => array(
@@ -108,7 +108,7 @@ try{
 	)
 	);
 		   
-	$mail->setFrom('itwebsite000@gmail.com', 'no-reply');
+	$mail->setFrom('it.website@yahoo.com', 'no-reply');
 	$mail->addAddress($email);
 	
 	$mail->isHTML(True);
